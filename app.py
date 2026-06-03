@@ -259,7 +259,7 @@ with tab1:
                 return "color: #22C55E; font-weight: bold;"
             return ""
 
-        styled = issue_df.style.applymap(style_priority, subset=["Priority"])
+        styled = issue_df.style.map(style_priority, subset=["Priority"])
         st.dataframe(styled, use_container_width=True, hide_index=True)
 
         # Individual issue cards
