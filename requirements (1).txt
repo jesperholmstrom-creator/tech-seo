@@ -1,0 +1,16 @@
+streamlit==1.35.0
+pandas==2.2.2
+openpyxl==3.1.2
+plotly==5.22.0
+python-pptx==0.6.23
+xlrd==2.0.1
+
+# Live crawler (Tab 6)
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=5.2.0
+
+# Google Search Console (Tab 7)
+google-auth>=2.29.0
+google-auth-httplib2>=0.2.0
+google-api-python-client>=2.127.0
