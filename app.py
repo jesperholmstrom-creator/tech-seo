@@ -247,14 +247,15 @@ st.markdown("---")
 # TABS
 # ─────────────────────────────────────────────
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
-    "🎯 Priority Actions",
-    "📊 Charts",
-    "🔎 Raw Data",
-    "📝 Insights",
-    "📤 Export",
-    "🕷️ Live Crawler",
-    "📈 Search Console",
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs([
+  "🎯 Priority Actions",
+  "📊 Charts",
+  "🔎 Raw Data",
+  "📝 Insights",
+  "📤 Export",
+  "🕷️ Live Crawler",
+  "📈 Search Console",
+  "📋 Full Audit Framework",   # NEW
 ])
 
 
