@@ -1,0 +1,12 @@
+streamlit
+pandas
+openpyxl
+plotly
+python-pptx
+xlrd
+requests
+beautifulsoup4
+lxml
+google-auth
+google-auth-httplib2
+google-api-python-client
