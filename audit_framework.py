@@ -779,20 +779,24 @@ AUDIT_FRAMEWORK = [
 ]
 
 
+]
+
+
 # ─────────────────────────────────────────────
 # Helpers
 # ─────────────────────────────────────────────
 
 def by_area():
-"""Return dict {area: [checks...]}."""
-out = {}
-for c in AUDIT_FRAMEWORK:
-    out.setdefault(c["area"], []).append(c)
-return out
+   """Return dict {area: [checks...]}."""
+   out = {}
+   for c in AUDIT_FRAMEWORK:
+       out.setdefault(c["area"], []).append(c)
+   return out
 
 
 def by_id(check_id: str):
-return next((c for c in AUDIT_FRAMEWORK if c["id"] == check_id), None)
+   """Return the check dict matching this id, or None."""
+   return next((c for c in AUDIT_FRAMEWORK if c["id"] == check_id), None)
 
 
 SEVERITY_ORDER = {"High": 0, "Medium": 1, "Low": 2, "Info": 3}
