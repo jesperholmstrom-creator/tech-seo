@@ -794,8 +794,15 @@ def by_area():
    return out
 
 
-def by_id(check_id: str):
+def by_id(check_id):
    """Return the check dict matching this id, or None."""
+   for c in AUDIT_FRAMEWORK:
+       if c["id"] == check_id:
+           return c
+   return None
+
+
+SEVERITY_ORDER = {"High": 0, "Medium": 1, "Low": 2, "Info": 3}
    return next((c for c in AUDIT_FRAMEWORK if c["id"] == check_id), None)
 
 
