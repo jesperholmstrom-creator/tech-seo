@@ -22,19 +22,19 @@ AI_BOTS = [
 ]
 
 def fetch_robots(domain):
-domain = domain.strip().rstrip("/")
-if not domain.startswith("http"):
-    domain = "https://" + domain
-parsed = urlparse(domain)
-for scheme in ["https", "http"]:
-    url = f"{scheme}://{parsed.netloc}/robots.txt"
-    try:
-        r = requests.get(url, timeout=8, headers={"User-Agent": "Mozilla/5.0"})
-        if r.status_code == 200:
-            return r.text, url
-    except Exception:
-        continue
-return None, None
+    domain = domain.strip().rstrip("/")
+    if not domain.startswith("http"):
+        domain = "https://" + domain
+    parsed = urlparse(domain)
+    for scheme in ["https", "http"]:
+        url = f"{scheme}://{parsed.netloc}/robots.txt"
+        try:
+            r = requests.get(url, timeout=8, headers={"User-Agent": "Mozilla/5.0"})
+            if r.status_code == 200:
+                return r.text, url
+        except Exception:
+            continue
+    return None, None
 
 def parse_robots(content, bot_name):
 """Parse robots.txt and return status for a given bot."""
