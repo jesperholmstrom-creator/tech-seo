@@ -247,7 +247,7 @@ st.markdown("---")
 # TABS
 # ─────────────────────────────────────────────
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs([
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([
   "🎯 Priority Actions",
   "📊 Charts",
   "🔎 Raw Data",
@@ -255,7 +255,8 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs([
   "📤 Export",
   "🕷️ Live Crawler",
   "📈 Search Console",
-  "📋 Full Audit Framework",   # NEW
+  "📋 Full Audit Framework",
+  "🤖 AI Crawler Audit"  # NEW
 ])
 
 
@@ -638,3 +639,7 @@ Install extra dependency: `pip install google-auth google-auth-httplib2 google-a
 import tab_audit
 with tab8:
     tab_audit.render(df, cols_detected, site_name)
+# ── TAB 9: AI Crawler Audit ──
+import tab_llm_audit
+with tab9:
+tab_llm_audit.render(df, cols_detected, site_name)
