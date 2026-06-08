@@ -642,4 +642,4 @@ with tab8:
 # ── TAB 9: AI Crawler Audit ──
 import tab_llm_audit
 with tab9:
-tab_llm_audit.render(df, cols_detected, site_name)
+    tab_llm_audit.render(df, cols_detected, site_name)
