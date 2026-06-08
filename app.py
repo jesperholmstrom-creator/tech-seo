@@ -247,16 +247,10 @@ st.markdown("---")
 # TABS
 # ─────────────────────────────────────────────
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9 = st.tabs([
-  "🎯 Priority Actions",
-  "📊 Charts",
-  "🔎 Raw Data",
-  "📝 Insights",
-  "📤 Export",
-  "🕷️ Live Crawler",
-  "📈 Search Console",
-  "📋 Full Audit Framework",
-  "🤖 AI Crawler Audit"  # NEW
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs([
+    "Priority Actions", "Charts", "Raw Data", "Insights", "Export", 
+    "Live Crawler", "Search Console", "Full Audit Framework", "AI Crawler Audit",
+    "⚡ JS Rendering Audit"
 ])
 
 
@@ -643,3 +637,7 @@ with tab8:
 import tab_llm_audit
 with tab9:
     tab_llm_audit.render(df, cols_detected, site_name)
+    # ── TAB 10: JS Rendering Audit ──
+import tab_js_rendering
+with tab10:
+    tab_js_rendering.render(df, cols_detected, site_name)
