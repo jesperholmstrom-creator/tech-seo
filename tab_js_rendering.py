@@ -104,7 +104,7 @@ def scan_hidden_blocks(raw_html, raw_soup, rendered_text):
          "desc": f"Discovered {js_acc_count} custom collapsible elements. If content inside loads dynamically post-click, bots will miss it."
      })
 
- tab_count = len(raw_soup.find_all(class_=lambda c: c and "tab-content" in c.lower() or "tab-pane" in c.lower()))
+ tab_count = sum(1 for t in raw_soup.find_all(True) if any("tab-content" in str(c) or "tab-pane" in str(c) for c in (t.get("class") or [])))
  if tab_count > 0:
      detected_blocks.append({
          "block_type": "Tabbed Navigation Container",
